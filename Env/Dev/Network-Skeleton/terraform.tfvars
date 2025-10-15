@@ -1,5 +1,5 @@
 # ---------------- General ----------------
-region       = "us-east-1"
+region       = "ap-south-1"
 project_name = "OTMS"
 env          = "dev"
 owner        = "chilgoze"
@@ -11,11 +11,11 @@ enable_dns_hostnames = true
 instance_tenancy     = "default"
 # ---------------- Public Subnets ----------------
 public_subnet_cidrs = ["10.0.0.0/23", "10.0.2.0/23"]
-public_subnet_azs   = ["us-east-1a", "us-east-1b"]
+public_subnet_azs   = ["ap-south-1a", "ap-south-1b"]
 
 # ---------------- Private Subnets ----------------
 private_subnet_cidrs = ["10.0.4.0/24", "10.0.5.0/24", "10.0.6.0/24"]
-private_subnet_azs   = ["us-east-1b", "us-east-1b", "us-east-1b"]
+private_subnet_azs   = ["ap-south-1b", "ap-south-1b", "ap-south-1b"]
 private_subnet_names = ["Database_subnet", "Application_subnet", "Frontend_database"]
 
 # ---------------- Routes ----------------
