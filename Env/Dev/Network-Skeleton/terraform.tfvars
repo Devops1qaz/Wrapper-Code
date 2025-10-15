@@ -231,7 +231,7 @@ lb_enable_deletion = false
 
 # ---------------- Route53 ----------------
 
-# create_route53_record = false
+ create_route53_record = false
 # domain_name           = "cloudopscrew.com"
 # subdomain_name        = "team"
 # zone_id               = "Z00597541LPVXKJXJSED3"
