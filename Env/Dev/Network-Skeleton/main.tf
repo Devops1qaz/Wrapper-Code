@@ -1,5 +1,5 @@
 module "network" {
-  source = "git::https://divyamishra-ai:g@github.com/Snaatak-Cloudops-Crew/IAC-Terraform-repo.git//Terraform/Module/Infra/Network-Skeleton?ref=SCRUM-491-abhishek"
+source = "git::https://github.com/Devops1qaz/Wrapper-Code.git//Network-Skeleton?ref=main"
 
   # ---------------- General ----------------
   region       = var.region
