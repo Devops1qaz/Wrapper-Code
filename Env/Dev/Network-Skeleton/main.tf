@@ -45,9 +45,9 @@ module "network" {
   lb_enable_deletion = var.lb_enable_deletion
 
   # ---------------- Route53 ----------------
-  create_route53_record = var.create_route53_record
-  domain_name           = var.domain_name
-  subdomain_name        = var.subdomain_name
+#  create_route53_record = var.create_route53_record
+#  domain_name           = var.domain_name
+#  subdomain_name        = var.subdomain_name
 
   # ---------------- Peering ----------------
   enable_vpc_peering   = var.enable_vpc_peering
