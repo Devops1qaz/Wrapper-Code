@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "otms-env-dev-cloud-ops-crew"
+    bucket = "otms-my-bucket"
     key    = "Env/Dev/Module/Applications/Salary-App-Infra/terraform.tfstate"
     region = "ap-southeast-1"
   }
