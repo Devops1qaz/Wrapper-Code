@@ -196,12 +196,11 @@ resource "aws_security_group_rule" "sg_rule" {
   )
 
   source_security_group_id = (
-    contains(keys(each.value), "source_sg_names") &&
-    each.value.source_sg_names != null &&
-    length(each.value.source_sg_names) > 0
+    try(length(each.value.source_sg_names), 0) > 0
     ? aws_security_group.security_group[each.value.source_sg_names[0]].id
     : null
-  )
+)
+
 }
 
 
