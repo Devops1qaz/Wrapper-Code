@@ -45,7 +45,7 @@ source = "git::https://github.com/Devops1qaz/Wrapper-Code.git//Network-Skeleton?
   lb_enable_deletion = var.lb_enable_deletion
 
   # ---------------- Route53 ----------------
-#  create_route53_record = var.create_route53_record
+  create_route53_record = var.create_route53_record
 #  domain_name           = var.domain_name
 #  subdomain_name        = var.subdomain_name
 
