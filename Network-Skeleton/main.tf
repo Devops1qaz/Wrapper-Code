@@ -189,17 +189,18 @@ resource "aws_security_group_rule" "sg_rule" {
   security_group_id = aws_security_group.security_group[each.value.sg_name].id
 
   cidr_blocks = (
-    contains(keys(each.value), "cidr_blocks") &&
-    !(contains(keys(each.value), "source_sg_names") && each.value.source_sg_names != null && length(each.value.source_sg_names) > 0)
-    ? each.value.cidr_blocks
-    : null
-  )
-
-  source_security_group_id = (
-    try(length(each.value.source_sg_names), 0) > 0
-    ? aws_security_group.security_group[each.value.source_sg_names[0]].id
-    : null
+  contains(keys(each.value), "cidr_blocks") &&
+  length(coalesce(each.value.source_sg_names, [])) == 0
+  ? each.value.cidr_blocks
+  : null
 )
+
+source_security_group_id = (
+  length(coalesce(each.value.source_sg_names, [])) > 0
+  ? aws_security_group.security_group[each.value.source_sg_names[0]].id
+  : null
+)
+
 
 }
 
